@@ -1,0 +1,6 @@
+feature/user
+
+create ok
+body{
+	show something;
+}
