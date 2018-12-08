@@ -18,7 +18,15 @@ for i, index in enumerate(a):
 def fun(x):
     return x+1
 
-#add annotation
+
+def test_answer():
+    assert fun(1) == 2
+    assert fun(2) == 3
+    assert fun(3) == 4
+    assert fun(4) == 5
+
+# add annotation
+
 class MyTest(unittest.TestCase):
     def test(self):
         self.assertEqual(fun(3), 4)
@@ -29,10 +37,9 @@ def square(x):
     >>> square(2)
     4
     >>> square(-2)
-    41
+    4
     """
     return x * x
-
 
 if __name__ == '__main__':
     import doctest
