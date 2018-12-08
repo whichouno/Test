@@ -1,3 +1,5 @@
+import unittest
+
 d = {'key': 'value'}
 print(d.get('key', 'default_value'))
 print(d.get('key2', 'default_value'))
@@ -11,3 +13,27 @@ print(filtered_values)
 a = [5, 7, 8]
 for i, index in enumerate(a):
     print("{i}{index}".format(i=i, index=index))
+
+
+def fun(x):
+    return x+1
+
+#add annotation
+class MyTest(unittest.TestCase):
+    def test(self):
+        self.assertEqual(fun(3), 4)
+
+
+def square(x):
+    """
+    >>> square(2)
+    4
+    >>> square(-2)
+    41
+    """
+    return x * x
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
