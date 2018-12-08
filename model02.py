@@ -1,4 +1,5 @@
 import unittest
+
 d = {'key': 'value'}
 print(d.get('key', 'default_value'))
 print(d.get('key2', 'default_value'))
@@ -21,3 +22,18 @@ def fun(x):
 class MyTest(unittest.TestCase):
     def test(self):
         self.assertEqual(fun(3), 4)
+
+
+def square(x):
+    """
+    >>> square(2)
+    4
+    >>> square(-2)
+    41
+    """
+    return x * x
+
+
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
