@@ -18,11 +18,7 @@ for i, index in enumerate(a):
 def fun(x):
     return x+1
 
-<<<<<<< .merge_file_5nHXHf
 #add annotation
-=======
-
->>>>>>> .merge_file_stSGbB
 class MyTest(unittest.TestCase):
     def test(self):
         self.assertEqual(fun(3), 4)
