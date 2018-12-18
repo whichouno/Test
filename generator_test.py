@@ -1,5 +1,5 @@
 #杨辉三角生成器
-def triangles():
+def triangles1():
     lineindex = 1
     list = []
     while (True):
@@ -12,6 +12,15 @@ def triangles():
             list = [1] + [list[i] + list[i + 1] for i in range(list_len - 1)] + [1]
         yield list
         lineindex = lineindex + 1
+
+def triangles():
+    yield [1]
+    yield [1, 1]
+    list = [1, 1]
+    while (True):
+        list_len = len(list)
+        list = [1] + [list[i] + list[i + 1] for i in range(list_len - 1)] + [1]
+        yield list
 
 #生成器单步调用
 
