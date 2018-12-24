@@ -11,8 +11,8 @@ class a(A):
 def showRun(o):
     o.run()
 
-showRun(a())
 
+showRun(a())
 
 
 class Student(object):
@@ -47,7 +47,7 @@ class Screen(object):
         return self.width
 
     @width_property.setter
-    def width_property(self,value):
+    def width_property(self, value):
         self.width = value
 
     @property
@@ -63,6 +63,7 @@ class Screen(object):
         self.resolution = self.height * self.width
         return self.resolution
 
+
 s = Screen()
 s.width_property = 1024
 s.height_property = 768
@@ -74,10 +75,7 @@ else:
     print('测试失败!')
 
 
-
-
 class Chain(object):
-
     def __init__(self, path=''):
         self._path = path
 
@@ -89,4 +87,33 @@ class Chain(object):
 
     __repr__ = __str__
 
+
 print(Chain().a.b.c)
+
+from enum import Enum, unique
+
+Month = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
+
+for name, member in Month.__members__.items():
+    print(name, '=>', member, ',', member.value)
+
+
+@unique
+class Weekday(Enum):
+    Sun = 0  # Sun的value被设定为0
+    Mon = 1
+    Tue = 2
+    Wed = 3
+    Thu = 4
+    Fri = 5
+    Sat = 6
+
+
+day1 = Weekday.Mon
+print(day1.value)
+
+
+import  uuid
+print(uuid.uuid1())
+
+
