@@ -14,10 +14,10 @@ def test_answer():
 
 class MyTest(unittest.TestCase):
     def setUp(self):
-        pass#print('setUp...')
+        print('setUp...')
 
     def tearDown(self):
-        pass#print('tearDown...')
+        print('tearDown...')
 
     def test(self):
         self.assertEqual(fun(3), 4)
@@ -35,18 +35,18 @@ def square(x):
 
 #unittest.main(verbosity=3, exit=False)
 
-print('1')
-
-def create_multipliers():
-    return [lambda x : i * x for i in range(5)]
-
-
-for i in create_multipliers():
-    print(i(1))
+# print('1')
+#
+# def create_multipliers():
+#     return [lambda x : i * x for i in range(5)]
+#
+#
+# for i in create_multipliers():
+#     print(i(1))
 
 if __name__ == '__main__':
-    #unittest.main()
-    print('2')
-    import doctest
-    doctest.testmod()
-    print('3')
+    unittest.main()
+    # print('2')
+    # import doctest
+    # doctest.testmod()
+    # print('3')
