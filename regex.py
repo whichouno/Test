@@ -24,3 +24,6 @@ print(g)
 re_telephone = re.compile(r'^(\d{3})-(\d{3,8})$')
 g = re_telephone.match('010-123456').groups()
 print(g)
+
+
+print(re_telephone.match('010-123456'))
